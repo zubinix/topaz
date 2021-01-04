@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>    
+    <id>ats-topaz</id>
+    <version>0.5.0</version>
+    <title>Topaz</title>
+    <authors>Zubin Sethna (Automated Testing Solutions)</authors>
+    <owners></owners>
+    <license type="expression">GPL-3.0-or-later</license>
+    <projectUrl>https://github.com/zubinix/topaz</projectUrl>
+<!--    <iconUrl></iconUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>A simple web browser automation library to help in writing test automation</summary>
+    <description>A simple web browser automation library developed for writing test automation for the Microsoft Dynamics and Business Central range of applications</description>
+    <releaseNotes>Project is in alpha development stage.</releaseNotes>
+    <copyright>By Zubin Sethna (Automated Testing Solutions) 2021</copyright>
+    <tags></tags>
+    <language>C#</language>
+    <dependencies>
+      <dependency id="" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="" target="" />
+  </files>
+</package>
