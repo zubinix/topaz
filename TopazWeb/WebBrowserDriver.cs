@@ -19,9 +19,9 @@ namespace Topaz.Web
 
         public enum SyncMethodEnum { PAGELOAD, AJAX, NONE };
 
-        private Object returnValue;
+        private Object? returnValue;
 
-        private string currentAction;
+        private string? currentAction;
 
         private bool doNetworkWait;
 
@@ -49,9 +49,9 @@ namespace Topaz.Web
 
         public bool doBrowserAction(Action<IWebDriver> browserAction,
                                     String actionDesc,
-                                    Func<IWebDriver, bool> before = null,
-                                    Func<IWebDriver, bool> after_beforesync = null,
-                                    Func<IWebDriver, bool> after=null, 
+                                    Func<IWebDriver, bool>? before = null,
+                                    Func<IWebDriver, bool>? after_beforesync = null,
+                                    Func<IWebDriver, bool>? after=null, 
                                     bool doReturnValue=false, 
                                     SyncMethodEnum sync=SyncMethodEnum.NONE, 
                                     bool isNewPageWithAjax=false, 
@@ -140,7 +140,7 @@ namespace Topaz.Web
             return result;
         }
 
-        public void setReturnvalue(Object retObj)
+        public void setReturnvalue(Object? retObj)
         {
             returnValue = retObj;
         }
@@ -521,7 +521,7 @@ XMLHttpRequest.prototype.send = window.newSend;
 
         public ReadOnlyCollection<Object> GetNetworkMonitorByIndex(int idx)
         {
-            ReadOnlyCollection<Object> result = null;
+            ReadOnlyCollection<Object>? result = null;
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             result = (ReadOnlyCollection<Object>)js.ExecuteScript($"return requestArray[{idx}];");
 
@@ -535,7 +535,7 @@ XMLHttpRequest.prototype.send = window.newSend;
             int count = GetNetworkMonitorQueueLength();
             for(int idx=0; idx < count; idx++)
             {
-                ReadOnlyCollection<Object> result = null;
+                ReadOnlyCollection<Object>? result = null;
                 result = (ReadOnlyCollection<Object>)js.ExecuteScript($"return requestArray[{idx}];");
                 string url = (string)result[(int)apiPart];
 
@@ -652,7 +652,7 @@ return typeof document.getElementByXpath != 'undefined';
         }
 
         // perform click action robustly
-        public void Click(By locator, Func<IWebDriver, bool> precondition = null, Func<IWebDriver, bool> postcondition = null)
+        public void Click(By locator, Func<IWebDriver, bool>? precondition = null, Func<IWebDriver, bool>? postcondition = null)
         {
             bool met_precondition = true;
             bool met_postcondition = false;

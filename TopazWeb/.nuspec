@@ -2,7 +2,7 @@
 <package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>    
     <id>ats-topaz</id>
-    <version>0.5.0</version>
+    <version>0.6.0</version>
     <title>Topaz</title>
     <authors>Zubin Sethna (Automated Testing Solutions)</authors>
     <owners></owners>
@@ -13,11 +13,16 @@
     <summary>A simple web browser automation library to help in writing test automation</summary>
     <description>A simple web browser automation library developed for writing test automation for the Microsoft Dynamics and Business Central range of applications</description>
     <releaseNotes>Project is in alpha development stage.</releaseNotes>
-    <copyright>By Zubin Sethna (Automated Testing Solutions) 2021</copyright>
+    <copyright>By Zubin Sethna (Automated Testing Solutions) 2021-22</copyright>
     <tags></tags>
     <language>C#</language>
     <dependencies>
-      <dependency id="" />
+	  <dependency id="Microsoft.Extensions.Configuration" version="6.0.0" />
+      <dependency id="Microsoft.Extensions.Logging" version="6.0.0" />
+      <dependency id="Newtonsoft.Json" version="13.0.1" />
+      <dependency id="Nlog.Extensions.Logging" version="1.7.4" />
+      <dependency id="RestSharp" version="106.15.0" />
+      <dependency id="Selenium.Webdriver" version="4.1.0" />
     </dependencies>
   </metadata>
   <files>
