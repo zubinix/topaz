@@ -1,0 +1,17 @@
+First install Nuget.exe
+
+To create nuget package:
+
+> cd TopazWeb
+> nuget pack TopazWeb.csproj -symbols
+
+To install nugets in local repo:
+
+> nuget add ats-topaz.0.6.0.nupkg -source c:\source\Local_Nuget_Repo
+
+To remove from repo:
+
+> nuget delete ats-topaz 0.6.0 -source c:\source\Local_Nuget_Repo
+
+Use web ui to upload symbol package to NuGet.org
+
